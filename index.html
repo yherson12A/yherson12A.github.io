@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de presentación personal de Nicolás Díaz">
+    <title>Nicolás Díaz - Presentación</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Merriweather', serif;
+            background-color: #f0f0f0;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: #000;
+            color: white;
+            padding: 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        /* Añadido el logo */
+        header .logo {
+            margin-top: 20px;
+            width: 150px;
+            height: auto;
+        }
+
+        nav {
+            background-color: transparent;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.5s ease;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            margin: 5px;
+            display: inline-block;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #555;
+            color: #fff;
+        }
+
+        nav.scrolled {
+            background-color: #000;
+        }
+
+        .section {
+            padding: 100px 20px;
+            background-color: white;
+            margin: 0;
+            text-align: center;
+            transition: background-color 0.5s ease;
+            opacity: 0;
+            animation: fadeInSection 1.5s ease-in-out forwards;
+        }
+
+        .section:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        .section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-family: 'Merriweather', serif;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            border-radius: 30px;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(100px);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background-color: #0056b3;
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInSection {
+            0% {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .section p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Nicolás Díaz</h1>
+        <p>Un joven con grandes objetivos y metas por cumplir</p>
+        <!-- Logo insertado correctamente -->
+        <img src="https://www.mediafire.com/file/g5x7a6izx4c75k9/DALL%25C2%25B7E_2024-09-15_16.40.39_-_A_sleek_and_modern_logo_designed_for_a_personal_website._The_logo_should_incorporate_the_name_%2527Nicol%25C3%25A1s_D%25C3%25ADaz%2527_and_emphasize_technology%252C_discipline%252C_and.webp/file" alt="Logo Nicolás Díaz" class="logo">
+    </header>
+
+    <nav id="navbar">
+        <a href="#quien-soy">Quién soy</a>
+        <a href="#mi-objetivo">Mi Objetivo</a>
+        <a href="#mis-mascotas">Mis Mascotas</a>
+        <a href="#mis-fortalezas">Mis Fortalezas</a>
+        <a href="#mis-debilidades">Mis Debilidades</a>
+        <a href="#me-gusta">Me Gusta</a>
+        <a href="#mision">Misión</a>
+        <a href="#vision">Visión</a>
+        <a href="#metas">Metas</a>
+        <a href="#logros-alcanzados">Logros</a>
+    </nav>
+
+    <div class="section" id="quien-soy">
+        <h2>Quién soy</h2>
+        <p>Mi nombre es Nicolás Díaz. Tengo 16 años y vivo en el hermoso país de Bolivia. Soy un joven decidido a perseguir mis sueños y superar cada obstáculo que se cruce en mi camino. Me considero una persona apasionada por los retos, ya que creo firmemente que cada desafío es una oportunidad para crecer.</p>
+    </div>
+
+    <div class="section" id="mi-objetivo">
+        <h2>Mi Objetivo</h2>
+        <p>Mi objetivo principal es poder superar mis propios límites físicos y mentales. Quiero llegar a pesar más de lo que mido y levantar 100kg en press banca. Sin embargo, no se trata solo de fuerza física, también busco lograr una vida equilibrada y disciplinada, en la que pueda cumplir todas mis metas personales y profesionales.</p>
+    </div>
+
+    <div class="section" id="mis-mascotas">
+        <h2>Mis Mascotas</h2>
+        <p>En mi hogar comparto mi vida con cuatro adorables compañeros: tres perros y un gato. George, Molly, y Fiona son los nombres de mis leales perros, mientras que el gato, al que curiosamente llamamos "Gato", aporta su particular personalidad al ambiente. Cada uno de ellos es parte fundamental de mi vida y mi familia.</p>
+    </div>
+
+    <div class="section" id="mis-fortalezas">
+        <h2>Mis Fortalezas</h2>
+        <p>Entre mis mayores fortalezas se encuentran la honestidad, la responsabilidad y la paciencia. A lo largo de los años, he aprendido la importancia de trabajar en equipo y de ser resiliente ante las dificultades. Estas cualidades me han permitido adaptarme a diferentes situaciones y mantenerme enfocado en mis metas a largo plazo.</p>
+    </div>
+
+    <div class="section" id="mis-debilidades">
+        <h2>Mis Debilidades</h2>
+        <p>En cuanto a debilidades, no considero que tenga ninguna que me limite de manera importante. Sin embargo, algo que podría señalar es una pequeña "mala genética en el pecho", lo que puede ser un reto en mi progreso físico. Aun así, no lo veo como un obstáculo insuperable, sino como un área en la que puedo seguir trabajando para mejorar.</p>
+    </div>
+
+    <div class="section" id="me-gusta">
+        <h2>Me Gusta</h2>
+        <p>Mis pasiones incluyen escuchar música, pasar tiempo con mis amigos, jugar videojuegos y descansar cuando tengo la oportunidad. Estas actividades
