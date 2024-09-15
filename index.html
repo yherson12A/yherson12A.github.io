@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Página de presentación personal de Nicolás Díaz">
     <title>Nicolás Díaz - Presentación</title>
-    
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Merriweather:wght@300&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Merriweather:wght@300&display=swap"
+        rel="stylesheet">
+
     <style>
         body {
             margin: 0;
@@ -22,7 +24,7 @@
         header {
             background-color: #000;
             color: white;
-            padding: 50px;
+            padding: 50px 20px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -30,7 +32,7 @@
 
         header h1 {
             font-family: 'Poppins', sans-serif;
-            font-size: 3rem;
+            font-size: 2.5rem;
             letter-spacing: 5px;
             text-transform: uppercase;
             animation: fadeInDown 1.5s ease-in-out;
@@ -41,10 +43,9 @@
             animation: fadeInUp 1.5s ease-in-out;
         }
 
-        /* Añadido el logo */
         header .logo {
             margin-top: 20px;
-            width: 150px;
+            width: 120px;
             height: auto;
         }
 
@@ -63,8 +64,8 @@
             text-decoration: none;
             color: white;
             font-family: 'Poppins', sans-serif;
-            font-size: 1.2rem;
-            padding: 10px 20px;
+            font-size: 1rem;
+            padding: 10px 15px;
             margin: 5px;
             display: inline-block;
             transition: background-color 0.3s ease, color 0.3s ease;
@@ -80,7 +81,7 @@
         }
 
         .section {
-            padding: 100px 20px;
+            padding: 60px 20px;
             background-color: white;
             margin: 0;
             text-align: center;
@@ -95,14 +96,14 @@
 
         .section h2 {
             font-family: 'Poppins', sans-serif;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            font-size: 2rem;
+            margin-bottom: 15px;
         }
 
         .section p {
             font-family: 'Merriweather', serif;
-            font-size: 1.2rem;
-            line-height: 1.8;
+            font-size: 1rem;
+            line-height: 1.6;
             max-width: 800px;
             margin: 0 auto;
         }
@@ -111,12 +112,12 @@
             display: inline-block;
             background-color: #007bff;
             color: white;
-            padding: 15px 30px;
+            padding: 10px 20px;
             text-align: center;
             border-radius: 30px;
             text-decoration: none;
             font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
+            font-size: 0.9rem;
             margin-top: 20px;
             transition: background-color 0.3s ease;
         }
@@ -131,7 +132,7 @@
             right: 20px;
             background-color: #007bff;
             color: white;
-            padding: 15px;
+            padding: 10px;
             border-radius: 50%;
             font-size: 1.5rem;
             text-align: center;
@@ -157,6 +158,7 @@
                 opacity: 0;
                 transform: translateY(-50px);
             }
+
             100% {
                 opacity: 1;
                 transform: translateY(0);
@@ -168,6 +170,7 @@
                 opacity: 0;
                 transform: translateY(50px);
             }
+
             100% {
                 opacity: 1;
                 transform: translateY(0);
@@ -179,6 +182,7 @@
                 opacity: 0;
                 transform: translateY(100px);
             }
+
             100% {
                 opacity: 1;
                 transform: translateY(0);
@@ -187,26 +191,46 @@
 
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+            }
+
+            header p {
+                font-size: 1rem;
             }
 
             .section h2 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             .section p {
-                font-size: 1rem;
+                font-size: 0.9rem;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+                padding: 8px 10px;
+            }
+
+            .button {
+                font-size: 0.8rem;
+                padding: 8px 15px;
+            }
+
+            .logo {
+                width: 100px;
             }
         }
     </style>
 </head>
+
 <body>
 
     <header>
         <h1>Nicolás Díaz</h1>
         <p>Un joven con grandes objetivos y metas por cumplir</p>
         <!-- Logo insertado correctamente -->
-        <img src="https://www.mediafire.com/file/g5x7a6izx4c75k9/DALL%25C2%25B7E_2024-09-15_16.40.39_-_A_sleek_and_modern_logo_designed_for_a_personal_website._The_logo_should_incorporate_the_name_%2527Nicol%25C3%25A1s_D%25C3%25ADaz%2527_and_emphasize_technology%252C_discipline%252C_and.webp/file" alt="Logo Nicolás Díaz" class="logo">
+        <img src="/mnt/data/A_sleek_and_modern_logo_designed_for_a_personal_we.png" alt="Logo Nicolás Díaz"
+            class="logo">
     </header>
 
     <nav id="navbar">
@@ -224,29 +248,159 @@
 
     <div class="section" id="quien-soy">
         <h2>Quién soy</h2>
-        <p>Mi nombre es Nicolás Díaz. Tengo 16 años y vivo en el hermoso país de Bolivia. Soy un joven decidido a perseguir mis sueños y superar cada obstáculo que se cruce en mi camino. Me considero una persona apasionada por los retos, ya que creo firmemente que cada desafío es una oportunidad para crecer.</p>
+        <p>Soy Nicolás Díaz, tengo 16 años y vivo en Bolivia.</p>
     </div>
 
     <div class="section" id="mi-objetivo">
         <h2>Mi Objetivo</h2>
-        <p>Mi objetivo principal es poder superar mis propios límites físicos y mentales. Quiero llegar a pesar más de lo que mido y levantar 100kg en press banca. Sin embargo, no se trata solo de fuerza física, también busco lograr una vida equilibrada y disciplinada, en la que pueda cumplir todas mis metas personales y profesionales.</p>
+        <p>Mi objetivo es poder pesar más de lo que mido y levantar 100kg en press banca. También deseo tener una vida con buena disciplina para alcanzar mis metas y vivir de manera saludable y equilibrada.</p>
     </div>
 
     <div class="section" id="mis-mascotas">
         <h2>Mis Mascotas</h2>
-        <p>En mi hogar comparto mi vida con cuatro adorables compañeros: tres perros y un gato. George, Molly, y Fiona son los nombres de mis leales perros, mientras que el gato, al que curiosamente llamamos "Gato", aporta su particular personalidad al ambiente. Cada uno de ellos es parte fundamental de mi vida y mi familia.</p>
+        <p>Tengo 3 perros y 1 gato. Los perros se llaman George, Molly y Fiona, y el gato se llama Gato. Ellos son una parte importante de mi vida y me brindan mucha compañía y alegría.</p>
     </div>
 
     <div class="section" id="mis-fortalezas">
         <h2>Mis Fortalezas</h2>
-        <p>Entre mis mayores fortalezas se encuentran la honestidad, la responsabilidad y la paciencia. A lo largo de los años, he aprendido la importancia de trabajar en equipo y de ser resiliente ante las dificultades. Estas cualidades me han permitido adaptarme a diferentes situaciones y mantenerme enfocado en mis metas a largo plazo.</p>
+        <p>Mis fortalezas incluyen la honestidad, la responsabilidad, la paciencia, la capacidad de trabajo en equipo, la resiliencia y la empatía. Estas cualidades me permiten enfrentar desafíos con una actitud positiva y trabajar bien con los demás.</p>
     </div>
 
     <div class="section" id="mis-debilidades">
         <h2>Mis Debilidades</h2>
-        <p>En cuanto a debilidades, no considero que tenga ninguna que me limite de manera importante. Sin embargo, algo que podría señalar es una pequeña "mala genética en el pecho", lo que puede ser un reto en mi progreso físico. Aun así, no lo veo como un obstáculo insuperable, sino como un área en la que puedo seguir trabajando para mejorar.</p>
+        <p>No considero que tenga debilidades significativas, pero reconozco que tengo una mala genética en el pecho que a veces puede afectar mi rendimiento físico.</p>
     </div>
 
     <div class="section" id="me-gusta">
         <h2>Me Gusta</h2>
-        <p>Mis pasiones incluyen escuchar música, pasar tiempo con mis amigos, jugar videojuegos y descansar cuando tengo la oportunidad. Estas actividades
+        <p>Me gusta escuchar música, salir con mis amigos, jugar videojuegos y dormir. También disfruto hablando con una chica de mi salón con la que tengo una buena conexión.</p>
+    </div>
+
+    <div class="section" id="mision">
+        <h2>Misión</h2>
+        <p>Mi misión es convertirme en un profesional exitoso en el campo de la ingeniería en sistemas. Aspiro a adquirir conocimientos profundos, habilidades técnicas y competencias que me permitan contribuir significativamente en mi campo y hacer una diferencia en la tecnología. Quiero formar parte de equipos innovadores y participar en proyectos que transform
+            <!DOCTYPE html>
+            <html lang="es">
+            
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta name="description" content="Página de presentación personal de Nicolás Díaz">
+                <title>Nicolás Díaz - Visión, Metas y Logros</title>
+            
+                <!-- Google Fonts -->
+                <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Merriweather:wght@300&display=swap" rel="stylesheet">
+            
+                <style>
+                    body {
+                        margin: 0;
+                        padding: 0;
+                        font-family: 'Merriweather', serif;
+                        background-color: #f0f0f0;
+                        color: #333;
+                        scroll-behavior: smooth;
+                    }
+            
+                    .section {
+                        padding: 60px 20px;
+                        background-color: white;
+                        margin: 0;
+                        text-align: center;
+                        transition: background-color 0.5s ease;
+                        opacity: 0;
+                        animation: fadeInSection 1.5s ease-in-out forwards;
+                    }
+            
+                    .section:nth-child(even) {
+                        background-color: #fafafa;
+                    }
+            
+                    .section h2 {
+                        font-family: 'Poppins', sans-serif;
+                        font-size: 2rem;
+                        margin-bottom: 15px;
+                    }
+            
+                    .section p {
+                        font-family: 'Merriweather', serif;
+                        font-size: 1rem;
+                        line-height: 1.6;
+                        max-width: 800px;
+                        margin: 0 auto;
+                    }
+            
+                    .section ul {
+                        list-style: none;
+                        padding: 0;
+                        max-width: 800px;
+                        margin: 0 auto;
+                    }
+            
+                    .section ul li {
+                        font-family: 'Merriweather', serif;
+                        font-size: 1rem;
+                        line-height: 1.6;
+                    }
+            
+                    @keyframes fadeInSection {
+                        0% {
+                            opacity: 0;
+                            transform: translateY(100px);
+                        }
+            
+                        100% {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+            
+                    @media (max-width: 768px) {
+                        .section h2 {
+                            font-size: 1.8rem;
+                        }
+            
+                        .section p {
+                            font-size: 0.9rem;
+                        }
+            
+                        .section ul li {
+                            font-size: 0.9rem;
+                        }
+                    }
+                </style>
+            </head>
+            
+            <body>
+            
+                <div class="section" id="vision">
+                    <h2>Visión</h2>
+                    <p>Mi visión es ser un profesional destacado en el campo de la ingeniería en sistemas, liderando proyectos innovadores y contribuyendo al desarrollo de soluciones tecnológicas que mejoren la vida de las personas. Quiero ser reconocido por mi capacidad de resolver problemas complejos y por mi dedicación a la excelencia. Imagino un futuro donde mi trabajo y mis habilidades sean fundamentales en el avance de la tecnología y en la creación de nuevas oportunidades para otros. Busco crear un impacto positivo en el mundo a través de mi carrera, ayudando a construir un futuro más eficiente y accesible para todos.</p>
+                </div>
+            
+                <div class="section" id="metas">
+                    <h2>Metas</h2>
+                    <p>Mis metas están orientadas a lograr un equilibrio entre el crecimiento profesional y personal. Me esfuerzo por alcanzar los siguientes objetivos:</p>
+                    <ul>
+                        <li>Finalizar el colegio con un rendimiento académico sobresaliente.</li>
+                        <li>Superar los 100 kg en press banca, demostrando mi compromiso con la salud y el fitness.</li>
+                        <li>Alcanzar un peso superior a los 75 kg, lo que reflejará mi dedicación al entrenamiento y una alimentación adecuada.</li>
+                        <li>Establecer una rutina de vida disciplinada que abarque tanto mi vida profesional como personal.</li>
+                        <li>Obtener el título de ingeniero en sistemas, asegurando mi preparación para enfrentar los desafíos de la industria tecnológica.</li>
+                    </ul>
+                </div>
+            
+                <div class="section" id="logros">
+                    <h2>Logros Alcanzados</h2>
+                    <p>A lo largo de mi trayectoria, he alcanzado varios logros que me han impulsado a seguir adelante con mis objetivos:</p>
+                    <ul>
+                        <li>He levantado 60 kg en press banca, lo cual marca un avance significativo en mi entrenamiento físico.</li>
+                        <li>He alcanzado el rango de plata en Valorant, lo que demuestra mi habilidad y dedicación en el ámbito de los videojuegos.</li>
+                        <li>He desarrollado habilidades en gestión del tiempo y organización, esenciales para equilibrar estudios, entrenamientos y vida personal.</li>
+                        <li>He establecido relaciones valiosas y redes de apoyo con amigos y compañeros, lo cual ha sido crucial para mi crecimiento personal.</li>
+                    </ul>
+                </div>
+            
+            </body>
+            
+            </html>
+            
