@@ -1,406 +1,238 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página de presentación personal de Nicolás Díaz">
-    <title>Nicolás Díaz - Presentación</title>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Merriweather:wght@300&display=swap"
-        rel="stylesheet">
-
+    <title>Carta para mi novia</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Merriweather', serif;
-            background-color: #f0f0f0;
-            color: #333;
-            scroll-behavior: smooth;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6e6;
+            overflow-x: hidden;
         }
 
-        header {
-            background-color: #000;
-            color: white;
-            padding: 50px 20px;
+        .container {
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        header h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2.5rem;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            animation: fadeInDown 1.5s ease-in-out;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            animation: fadeInUp 1.5s ease-in-out;
-        }
-
-        header .logo {
-            margin-top: 20px;
-            width: 120px;
-            height: auto;
-        }
-
-        nav {
-            background-color: transparent;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            transition: background-color 0.5s ease;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
-            padding: 10px 15px;
-            margin: 5px;
-            display: inline-block;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: #555;
-            color: #fff;
-        }
-
-        nav.scrolled {
-            background-color: #000;
-        }
-
-        .section {
-            padding: 60px 20px;
-            background-color: white;
-            margin: 0;
-            text-align: center;
-            transition: background-color 0.5s ease;
-            opacity: 0;
-            animation: fadeInSection 1.5s ease-in-out forwards;
-        }
-
-        .section:nth-child(even) {
-            background-color: #fafafa;
-        }
-
-        .section h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-
-        .section p {
-            font-family: 'Merriweather', serif;
-            font-size: 1rem;
-            line-height: 1.6;
+            margin: 50px auto;
+            padding: 20px;
             max-width: 800px;
-            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            position: relative;
+            z-index: 2;
         }
 
-        .button {
-            display: inline-block;
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            border-radius: 30px;
-            text-decoration: none;
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.9rem;
+        h1 {
+            color: #e60073;
+            font-family: 'Cursive', serif;
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Botón para nueva carta */
+        .new-letter-btn {
             margin-top: 20px;
-            transition: background-color 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #0056b3;
-        }
-
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #007bff;
+            padding: 10px 20px;
+            background-color: #e60073;
             color: white;
-            padding: 10px;
-            border-radius: 50%;
-            font-size: 1.5rem;
-            text-align: center;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
+            font-size: 1.2rem;
             transition: background-color 0.3s ease;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(100px);
         }
 
-        .back-to-top.show {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
+        .new-letter-btn:hover {
+            background-color: #d10066;
         }
 
-        .back-to-top:hover {
-            background-color: #0056b3;
+        /* Nueva carta decorada */
+        .new-letter {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff0f5;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #e60073;
+            font-family: 'Georgia', serif;
         }
 
-        @keyframes fadeInDown {
+        .new-letter h2 {
+            font-family: 'Brush Script MT', cursive;
+            color: #e60073;
+            font-size: 2.5rem;
+        }
+
+        .new-letter p {
+            font-size: 1.3rem;
+            color: #444;
+            line-height: 2;
+            padding: 0 20px;
+        }
+
+        /* Imágenes decorativas */
+        .image-container {
+            display: none;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            width: 200px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #e60073;
+        }
+
+        /* Imagen más pequeña (la tercera) */
+        .image-container img:last-child {
+            width: 200px;
+        }
+
+        /* Corazones flotantes */
+        .heart {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            background: url('https://i.imgur.com/OdLHpNH.png') no-repeat center;
+            background-size: cover;
+            animation: float 5s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        @keyframes float {
             0% {
-                opacity: 0;
+                transform: translateY(0);
+                opacity: 1;
+            }
+            50% {
                 transform: translateY(-50px);
+                opacity: 0.8;
             }
-
             100% {
-                opacity: 1;
                 transform: translateY(0);
+                opacity: 1;
             }
         }
 
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* Personalización de posición de corazones */
+        .heart:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
         }
 
-        @keyframes fadeInSection {
-            0% {
-                opacity: 0;
-                transform: translateY(100px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .heart:nth-child(2) {
+            left: 20%;
+            animation-delay: 1s;
+            animation-duration: 6s;
         }
 
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
+        .heart:nth-child(3) {
+            left: 30%;
+            animation-delay: 0.5s;
+        }
 
-            header p {
-                font-size: 1rem;
-            }
+        .heart:nth-child(4) {
+            left: 40%;
+            animation-delay: 2s;
+            animation-duration: 7s;
+        }
 
-            .section h2 {
-                font-size: 1.8rem;
-            }
+        .heart:nth-child(5) {
+            left: 50%;
+            animation-delay: 1.5s;
+        }
 
-            .section p {
-                font-size: 0.9rem;
-            }
+        .heart:nth-child(6) {
+            left: 60%;
+            animation-delay: 2.5s;
+            animation-duration: 8s;
+        }
 
-            nav a {
-                font-size: 0.9rem;
-                padding: 8px 10px;
-            }
+        .heart:nth-child(7) {
+            left: 70%;
+            animation-delay: 1s;
+        }
 
-            .button {
-                font-size: 0.8rem;
-                padding: 8px 15px;
-            }
+        .heart:nth-child(8) {
+            left: 80%;
+            animation-delay: 3s;
+            animation-duration: 6s;
+        }
 
-            .logo {
-                width: 100px;
-            }
+        .heart:nth-child(9) {
+            left: 90%;
+            animation-delay: 2s;
         }
     </style>
 </head>
-
 <body>
+    <!-- Corazones animados -->
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
 
-    <header>
-        <h1>Nicolás Díaz</h1>
-        <p>Un joven con grandes objetivos y metas por cumplir</p>
-        <!-- Logo insertado correctamente -->
-        <img src="/mnt/data/A_sleek_and_modern_logo_designed_for_a_personal_we.png" alt="Logo Nicolás Díaz"
-            class="logo">
-    </header>
+    <!-- Contenido de la primera carta -->
+    <div class="container">
+        <h1>Para mi amor</h1>
+        <p>
+            Hoy quiero recordarte lo mucho que significas para mí. No hay palabras suficientes para describir todo lo que siento
+            cuando estoy a tu lado, pero intentaré con esta carta expresar un poco de ese amor que llevo en mi corazón.
+            Eres mi razón de sonreír, mi apoyo en los momentos difíciles y la persona con la que quiero compartir cada día de mi vida.
+            Gracias por ser tan increíble, por darme tu amor incondicional y por hacerme la persona más feliz del mundo.
+        </p>
 
-    <nav id="navbar">
-        <a href="#quien-soy">Quién soy</a>
-        <a href="#mi-objetivo">Mi Objetivo</a>
-        <a href="#mis-mascotas">Mis Mascotas</a>
-        <a href="#mis-fortalezas">Mis Fortalezas</a>
-        <a href="#mis-debilidades">Mis Debilidades</a>
-        <a href="#me-gusta">Me Gusta</a>
-        <a href="#mision">Misión</a>
-        <a href="#vision">Visión</a>
-        <a href="#metas">Metas</a>
-        <a href="#logros-alcanzados">Logros</a>
-    </nav>
+        <!-- Imágenes decorativas (ocultas por defecto) -->
+        <div class="image-container" id="imageContainer">
+            <img src="/90c951cc-c347-4010-8bc2-a11cc3c30613.jpg" alt="Imagen 1">
+            <img src="/IMG_0025.JPEG" alt="Imagen 2">
+            <img src="/DDB1C5C5-5AC0-45AD-8E4C-00EF266780E8_Original.JPEG" alt="Imagen 3">
+        </div>
 
-    <div class="section" id="quien-soy">
-        <h2>Quién soy</h2>
-        <p>Soy Nicolás Díaz, tengo 16 años y vivo en Bolivia.</p>
+        <!-- Botón para mostrar la nueva carta y las imágenes -->
+        <button class="new-letter-btn" onclick="showNewContent()">APRETA ESTE BOTON BABY GIRL</button>
+        
+        <!-- Nueva carta decorada -->
+        <div class="new-letter" id="newLetter">
+            <h2>Mi segunda carta para ti</h2>
+            <p>
+                Hola mi amor, yo sé que te gustan las cartas a mano, pero también quiero darte esta carta por aquí. Esta es eterna, jajaja, 
+                la veremos cuando seamos viejitos, y nuestra descendencia también la verá. Te amo muchísimo y hoy seguramente la pasaré 
+                muy bien contigo, porque siempre la paso bien cuando estoy contigo. Me haces olvidar todo lo malo. 
+                Cuando estoy contigo, no pienso en otra cosa más que en estar a tu lado. 
+                <br><br>
+                Hacer este código en HTML no fue para nada fácil, pero quería hacer algo diferente para ti. Nunca te rindas y sigue esforzándote, 
+                amor. Hoy viste que puedes lograr grandes cosas por ti sola, ¡vendiste muchas flores! Eres increíble y muy bella. 
+                Te amo muchísimo, mi amor.
+                <br><br>
+                Besos y abrazos, tuyo por siempre.
+            </p>
+        </div>
     </div>
 
-    <div class="section" id="mi-objetivo">
-        <h2>Mi Objetivo</h2>
-        <p>Mi objetivo es poder pesar más de lo que mido y levantar 100kg en press banca. También deseo tener una vida con buena disciplina para alcanzar mis metas y vivir de manera saludable y equilibrada.</p>
-    </div>
+    <script>
+        function showNewContent() {
+            document.getElementById('newLetter').style.display = 'block';
+            document.getElementById('imageContainer').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
 
-    <div class="section" id="mis-mascotas">
-        <h2>Mis Mascotas</h2>
-        <p>Tengo 3 perros y 1 gato. Los perros se llaman George, Molly y Fiona, y el gato se llama Gato. Ellos son una parte importante de mi vida y me brindan mucha compañía y alegría.</p>
-    </div>
-
-    <div class="section" id="mis-fortalezas">
-        <h2>Mis Fortalezas</h2>
-        <p>Mis fortalezas incluyen la honestidad, la responsabilidad, la paciencia, la capacidad de trabajo en equipo, la resiliencia y la empatía. Estas cualidades me permiten enfrentar desafíos con una actitud positiva y trabajar bien con los demás.</p>
-    </div>
-
-    <div class="section" id="mis-debilidades">
-        <h2>Mis Debilidades</h2>
-        <p>No considero que tenga debilidades significativas, pero reconozco que tengo una mala genética en el pecho que a veces puede afectar mi rendimiento físico.</p>
-    </div>
-
-    <div class="section" id="me-gusta">
-        <h2>Me Gusta</h2>
-        <p>Me gusta escuchar música, salir con mis amigos, jugar videojuegos y dormir. </p>
-    </div>
-
-    <div class="section" id="mision">
-        <h2>Misión</h2>
-        <p>Mi misión es convertirme en un profesional exitoso en el campo de la ingeniería en sistemas. Aspiro a adquirir conocimientos profundos, habilidades técnicas y competencias que me permitan contribuir significativamente en mi campo y hacer una diferencia en la tecnología. Quiero formar parte de equipos innovadores y participar en proyectos que transform
-            <!DOCTYPE html>
-            <html lang="es">
-            
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <meta name="description" content="Página de presentación personal de Nicolás Díaz">
-                <title>Nicolás Díaz - Visión, Metas y Logros</title>
-            
-                <!-- Google Fonts -->
-                <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Merriweather:wght@300&display=swap" rel="stylesheet">
-            
-                <style>
-                    body {
-                        margin: 0;
-                        padding: 0;
-                        font-family: 'Merriweather', serif;
-                        background-color: #f0f0f0;
-                        color: #333;
-                        scroll-behavior: smooth;
-                    }
-            
-                    .section {
-                        padding: 60px 20px;
-                        background-color: white;
-                        margin: 0;
-                        text-align: center;
-                        transition: background-color 0.5s ease;
-                        opacity: 0;
-                        animation: fadeInSection 1.5s ease-in-out forwards;
-                    }
-            
-                    .section:nth-child(even) {
-                        background-color: #fafafa;
-                    }
-            
-                    .section h2 {
-                        font-family: 'Poppins', sans-serif;
-                        font-size: 2rem;
-                        margin-bottom: 15px;
-                    }
-            
-                    .section p {
-                        font-family: 'Merriweather', serif;
-                        font-size: 1rem;
-                        line-height: 1.6;
-                        max-width: 800px;
-                        margin: 0 auto;
-                    }
-            
-                    .section ul {
-                        list-style: none;
-                        padding: 0;
-                        max-width: 800px;
-                        margin: 0 auto;
-                    }
-            
-                    .section ul li {
-                        font-family: 'Merriweather', serif;
-                        font-size: 1rem;
-                        line-height: 1.6;
-                    }
-            
-                    @keyframes fadeInSection {
-                        0% {
-                            opacity: 0;
-                            transform: translateY(100px);
-                        }
-            
-                        100% {
-                            opacity: 1;
-                            transform: translateY(0);
-                        }
-                    }
-            
-                    @media (max-width: 768px) {
-                        .section h2 {
-                            font-size: 1.8rem;
-                        }
-            
-                        .section p {
-                            font-size: 0.9rem;
-                        }
-            
-                        .section ul li {
-                            font-size: 0.9rem;
-                        }
-                    }
-                </style>
-            </head>
-            
-            <body>
-            
-                <div class="section" id="vision">
-                    <h2>Visión</h2>
-                    <p>Mi visión es ser un profesional destacado en el campo de la ingeniería en sistemas, liderando proyectos innovadores y contribuyendo al desarrollo de soluciones tecnológicas que mejoren la vida de las personas. Quiero ser reconocido por mi capacidad de resolver problemas complejos y por mi dedicación a la excelencia. Imagino un futuro donde mi trabajo y mis habilidades sean fundamentales en el avance de la tecnología y en la creación de nuevas oportunidades para otros. Busco crear un impacto positivo en el mundo a través de mi carrera, ayudando a construir un futuro más eficiente y accesible para todos.</p>
-                </div>
-            
-                <div class="section" id="metas">
-                    <h2>Metas</h2>
-                    <p>Mis metas están orientadas a lograr un equilibrio entre el crecimiento profesional y personal. Me esfuerzo por alcanzar los siguientes objetivos:</p>
-                    <ul>
-                        <li>Finalizar el colegio con un rendimiento académico sobresaliente.</li>
-                        <li>Superar los 100 kg en press banca, demostrando mi compromiso con la salud y el fitness.</li>
-                        <li>Alcanzar un peso superior a los 75 kg, lo que reflejará mi dedicación al entrenamiento y una alimentación adecuada.</li>
-                        <li>Establecer una rutina de vida disciplinada que abarque tanto mi vida profesional como personal.</li>
-                        <li>Obtener el título de ingeniero en sistemas, asegurando mi preparación para enfrentar los desafíos de la industria tecnológica.</li>
-                    </ul>
-                </div>
-            
-                <div class="section" id="logros">
-                    <h2>Logros Alcanzados</h2>
-                    <p>A lo largo de mi trayectoria, he alcanzado varios logros que me han impulsado a seguir adelante con mis objetivos:</p>
-                    <ul>
-                        <li>He levantado 60 kg en press banca, lo cual marca un avance significativo en mi entrenamiento físico.</li>
-                        <li>He alcanzado el rango de plata en Valorant, lo que demuestra mi habilidad y dedicación en el ámbito de los videojuegos.</li>
-                        <li>He desarrollado habilidades en gestión del tiempo y organización, esenciales para equilibrar estudios, entrenamientos y vida personal.</li>
-                        <li>He establecido relaciones valiosas y redes de apoyo con amigos y compañeros, lo cual ha sido crucial para mi crecimiento personal.</li>
-                    </ul>
-                </div>
-            
-            </body>
-            
-            </html>
-            
