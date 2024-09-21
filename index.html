@@ -100,6 +100,48 @@
             width: 200px;
         }
 
+        /* Corazones flotantes */
+        .heart {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            background: url('https://mega.nz/file/YoJhiQ5T#Uis2Z6Tky6yTGL_MQlK8yxXmyZ8gNQisjVP_v2bcgds') no-repeat center;
+            background-size: cover;
+            animation: float 5s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-50px);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Personalización de posición de corazones */
+     
+    </style>
+</head>
+<body>
+    <!-- Corazones animados -->
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+
     <!-- Contenido de la primera carta -->
     <div class="container">
         <h1>Para mi amor</h1>
